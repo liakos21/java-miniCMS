@@ -1,0 +1,24 @@
+#set( $layout = "Admin.vm" )
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+            <form action="/iliasApp/admin/articles/store" method="POST">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="article.title" id="title" class="form-control" />
+                </div>
+	            <div class="form-group">
+		            <label for="slug">Slug</label>
+		            <input type="text" name="article.slug" id="slug" class="form-control" />
+	            </div>
+	            <div class="form-group">
+		            <label for="content">Content</label>
+		            <textarea name="article.content" id="content" class="form-control" rows="5"></textarea>
+	            </div>
+	            <div class="form-group">
+		            <button type="submit" class="btn btn-md btn-success">Create</button>
+	            </div>
+            </form>
+        </div>
+    </div>
+</div>

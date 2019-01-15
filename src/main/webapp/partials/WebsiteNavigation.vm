@@ -1,0 +1,19 @@
+<div class="container-fluid pt-3 pb-3">
+	<div class="row">
+		<div class="col-sm-10">
+			<ul class="nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/iliasApp/">Home</a>
+				</li>
+                #foreach($page in $menuPages)
+					<li class="nav-item">
+						<a class="nav-link" href="/iliasApp/pages/$page.slug">$page.title</a>
+					</li>
+                #end
+			</ul>
+		</div>
+		<div class="col-sm-2">
+			<a href="/iliasApp/admin" class="btn btn-block btn-warning">View Dashboard</a>
+		</div>
+	</div>
+</div>
