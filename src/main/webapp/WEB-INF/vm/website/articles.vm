@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+        #foreach($article in $articles)
+			<div class="col-sm-4">
+				<div class="card" style="width: 18rem;">
+					<div class="card-body">
+						<h5 class="card-title">$article.title</h5>
+						<p class="card-text">$article.content</p>
+						<a href="/iliasApp/articles/$article.slug" class="btn btn-primary">Read More</a>
+					</div>
+				</div>
+			</div>
+        #end
+	</div>
+</div>

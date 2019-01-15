@@ -3,13 +3,16 @@
 		<div class="col-sm-10">
 			<ul class="nav">
 				<li class="nav-item">
-					<a class="nav-link" href="/iliasApp/">Home</a>
+					<a class="nav-link #if('home' == $activepage) active #end" href="/iliasApp/">Home</a>
 				</li>
                 #foreach($page in $menuPages)
 					<li class="nav-item">
-						<a class="nav-link" href="/iliasApp/pages/$page.slug">$page.title</a>
+						<a class="nav-link #if($page.slug == $activepage) active #end" href="/iliasApp/pages/$page.slug">$page.title</a>
 					</li>
                 #end
+				<li class="nav-item">
+					<a class="nav-link #if('articles' == $activepage) active #end" href="/iliasApp/articles">Articles</a>
+				</li>
 			</ul>
 		</div>
 		<div class="col-sm-2">

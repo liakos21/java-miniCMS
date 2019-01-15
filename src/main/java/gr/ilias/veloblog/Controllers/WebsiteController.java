@@ -25,6 +25,14 @@ public class WebsiteController implements Serializable {
     public void index() {
         result.include("menuPages", pageService.findAll());
         result.include("articles", articleService.findAll());
+        result.include("activepage", "home");
+    }
+
+    @Get("/articles")
+    public void articles() {
+        result.include("menuPages", pageService.findAll());
+        result.include("articles", articleService.findAll());
+        result.include("activepage", "articles");
     }
 
     @Get
@@ -33,6 +41,7 @@ public class WebsiteController implements Serializable {
         System.out.println(slug);
         result.include("page", pageService.getPageBySlug(slug));
         result.include("menuPages", pageService.findAll());
+        result.include("activepage", slug);
     }
 
     @Get
@@ -40,5 +49,6 @@ public class WebsiteController implements Serializable {
     public void article(String slug) {
         result.include("article", articleService.getArticleBySlug(slug));
         result.include("menuPages", pageService.findAll());
+        result.include("activepage", slug);
     }
 }
