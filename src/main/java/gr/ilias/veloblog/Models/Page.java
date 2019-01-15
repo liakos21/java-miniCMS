@@ -24,10 +24,4 @@ public class Page extends Base {
     private String content;
 
     public Page() { }
-
-    public Page(String title, String slug, String content) {
-        this.title = title;
-        this.slug = slug;
-        this.content = content;
-    }
 }

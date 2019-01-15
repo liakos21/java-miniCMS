@@ -1,9 +1,6 @@
 package gr.ilias.veloblog.Models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -22,10 +19,4 @@ public class Article extends Base {
     private String content;
 
     public Article() { }
-
-    public Article(String title, String slug, String content) {
-        this.title = title;
-        this.slug = slug;
-        this.content = content;
-    }
 }
